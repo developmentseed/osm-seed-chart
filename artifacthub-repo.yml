@@ -1,0 +1,15 @@
+# Artifact Hub (https://artifacthub.io) repository metadata file
+# ref: https://github.com/artifacthub/hub/blob/master/docs/repositories.md#helm-charts-repositories
+#
+# Direct links to our Helm charts:
+#
+repositoryID: 177d6f76-2e41-4865-bcb5-5612be42222f
+owners:
+  - name: Sajjad Anwar 
+    email: sajjad@developmentseed.org
+  - name: Sanjay Bhangar
+    email: sanjay@developmentseed.org
+  - name: Ruben Lopez Mendoza
+    email: ruben@developmentseed.org
+ignore:
+  - name: osm-seed
