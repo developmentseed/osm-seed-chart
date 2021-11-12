@@ -1,0 +1,43 @@
+---
+layout: none
+---
+{%- assign osm-seed = site.data.index.entries.osm-seed | sort: 'created' | reverse -%}
+
+{%- assign osm_seed_latest = osm-seed | first -%}
+
+{%- capture "osm_seed_stable_version" -%}
+{%- for chart in osm-seed -%}
+    {%- unless chart.version contains "-" -%}
+        {{ chart.version }};
+    {%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign osm_seed_stable_version = osm_seed_stable_version | split: ";" | first -%}
+
+{%- capture "osm_seed_pre_version" -%}
+{%- for chart in osm-seed -%}
+    {%- assign dots_count_after_dash = chart.version | split: "-" | shift | first | split: "." | size | minus: 1 -%}
+    {%- assign first_char_after_dash = chart.version | split: "-" | shift | first | slice: 0 -%}
+    {%- if chart.version contains "-" -%}
+        {%- if dots_count_after_dash == 1 -%}
+            {%- if first_char_after_dash != "n" -%}
+                {{ chart.version }};
+            {%- endif -%}
+        {%- endif -%}
+    {%- else -%}
+        {{ chart.version }};
+    {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign osm_seed_pre_version = osm_seed_pre_version | split: ";" | first -%}
+
+
+{
+    "osm-seed":
+        {
+            "stable": "{{ osm_seed_stable_version }}",
+            "pre": "{{ osm_seed_pre_version }}",
+            "dev": "{{ osm_seed_latest.version }}",
+            "latest": "{{ osm_seed_latest.version }}"
+        }
+}
