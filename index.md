@@ -6,14 +6,10 @@
 {%- for chartmap in site.data.index.entries %}
 - [Development Releases: {{ chartmap[0] }}](#development-releases-{{ chartmap[0] | slugify }})
 {%- endfor %} -->
-
-
-<!-- ## Stable releases
+## Stable releases
 
 {% for chartmap in site.data.index.entries %}
   {% if site.stableCharts contains chartmap[0] %}
-### {{ chartmap[0] }}
-
 | Version | Date | App. version |
 |---------|------|---------------------|
     {%- assign sortedcharts = chartmap[1] | sort: 'created' | reverse -%}
@@ -23,16 +19,30 @@
       {%- endunless -%}
     {%- endfor %}
   {%- endif %}
-{% endfor %} -->
+{% endfor %}
 
+## Development releases
 
 {% for chartmap in site.data.index.entries %}
-### Development releases: {{ chartmap[0] }}
-
 | Version | Date | App. version |
 |---------|------|---------------------|
   {%- assign sortedcharts = chartmap[1] | sort: 'created' | reverse %}
   {%- for chart in sortedcharts %}
+    {%- if chart.version contains "dev" %}
 | [{{ chart.version }}]({{ chart.urls[0] }}) | {{ chart.created | date_to_long_string }} | {{ chart.appVersion }} |
+    {%- endif -%}
+  {%- endfor %}
+{% endfor %}
+
+## Other releases
+
+{% for chartmap in site.data.index.entries %}
+| Version | Date | App. version |
+|---------|------|---------------------|
+  {%- assign sortedcharts = chartmap[1] | sort: 'created' | reverse %}
+  {%- for chart in sortedcharts %}
+    {%- if chart.version contains "-n" %}
+| [{{ chart.version }}]({{ chart.urls[0] }}) | {{ chart.created | date_to_long_string }} | {{ chart.appVersion }} |
+    {%- endif -%}
   {%- endfor %}
 {% endfor %}
