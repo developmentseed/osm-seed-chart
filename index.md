@@ -1,6 +1,6 @@
 ## See installation instructions for:
 
-- [osm-seed](https://github.com/developmentseed/osm-seed)
+- [osm-seed](https://github.com/osm-seed/osm-seed)
 
 <!-- Jump to:
 {%- for chartmap in site.data.index.entries %}
