@@ -6202,6 +6202,15 @@ entries:
     version: 0.1.0-n338.hffd45da
   - apiVersion: v1
     appVersion: 1.0.0
+    created: "2026-01-27T21:57:47.578431092Z"
+    description: Helm Chart to deploy the OpenStreetMap software
+    digest: 2e2126b1e20f95d0089192cc79d52dab9de2265cc2c163f7bd2504fbe666b0f4
+    name: osm-seed
+    urls:
+    - https://osm-seed.github.io/osm-seed-chart/osm-seed-0.1.0-0.dev.git.989.h60325d0.tgz
+    version: 0.1.0-0.dev.git.989.h60325d0
+  - apiVersion: v1
+    appVersion: 1.0.0
     created: "2026-01-27T21:52:30.733767535Z"
     description: Helm Chart to deploy the OpenStreetMap software
     digest: 1d19be57c77a1d65ef7104a766d5873044cbd61bd4569339e801bd183a1ce12e
@@ -7343,4 +7352,4 @@ entries:
     urls:
     - https://osm-seed.github.io/osm-seed-chart/osm-seed-0.0.1-0.dev.git.1.h37af320.tgz
     version: 0.0.1-0.dev.git.1.h37af320
-generated: "2026-01-27T21:52:30.729048248Z"
+generated: "2026-01-27T21:57:47.573317547Z"
