@@ -5,11 +5,11 @@
 #
 repositoryID: 177d6f76-2e41-4865-bcb5-5612be42222f
 owners:
+  - name: Ruben Lopez Mendoza
+    email: rub2106@gmail.com
   - name: Sajjad Anwar 
     email: sajjad@developmentseed.org
   - name: Sanjay Bhangar
     email: sanjay@developmentseed.org
-  - name: Ruben Lopez Mendoza
-    email: ruben@developmentseed.org
 ignore:
   - name: osm-seed
