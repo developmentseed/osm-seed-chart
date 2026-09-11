@@ -6664,6 +6664,40 @@ entries:
     version: 0.1.0-0.dev.git.1005.hfcda048
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2026-09-11T21:31:25.878331829Z"
+    description: Helm chart to run a full OpenStreetMap-style stack on Kubernetes
+      - website and API, database with backups, replication and planet dumps, vector
+      tiles, Nominatim, Overpass, Taginfo, Tasking Manager, OSMCha, Level0 and monitoring
+    digest: 07594880e14a7d425be3ea76e85789a212212540d90a49bf1be6f146238e70f4
+    home: https://github.com/osm-seed/osm-seed
+    keywords:
+    - openstreetmap
+    - osm
+    - gis
+    - vector-tiles
+    - nominatim
+    - overpass
+    - tasking-manager
+    - taginfo
+    - osmcha
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - name: Rub21
+      url: https://github.com/Rub21
+    - name: geohacker
+      url: https://github.com/geohacker
+    - name: batpad
+      url: https://github.com/batpad
+    name: osm-seed
+    sources:
+    - https://github.com/osm-seed/osm-seed
+    - https://github.com/osm-seed/osm-seed-chart
+    type: application
+    urls:
+    - https://osm-seed.github.io/osm-seed-chart/osm-seed-0.1.0-0.dev.git.1005.hb40b9b0.tgz
+    version: 0.1.0-0.dev.git.1005.hb40b9b0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2026-09-11T17:55:58.658790666Z"
     description: Helm chart to run a full OpenStreetMap-style stack on Kubernetes
       - website and API, database with backups, replication and planet dumps, vector
@@ -8575,4 +8609,4 @@ entries:
     urls:
     - https://osm-seed.github.io/osm-seed-chart/osm-seed-0.0.1-0.dev.git.1.h37af320.tgz
     version: 0.0.1-0.dev.git.1.h37af320
-generated: "2026-09-11T20:41:50.47676652Z"
+generated: "2026-09-11T21:31:25.874337031Z"
